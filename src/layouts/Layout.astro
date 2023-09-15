@@ -1,0 +1,93 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const { pathname } = Astro.url;
+
+const listItemClassName = "flex justify-center flex-col";
+const paths = [
+  {
+    address: "/",
+    title: "Home",
+    class: listItemClassName,
+  },
+  {
+    address: "/about",
+    title: "About",
+    class: listItemClassName,
+  },
+  {
+    address: "/xperience",
+    title: "Xperience",
+    class: listItemClassName,
+  },
+  {
+    address: "/contact",
+    title: "Contact",
+    class: listItemClassName,
+  },
+  {
+    address: "/blog",
+    title: "Blog",
+    class: listItemClassName,
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="p-4 font-helvetica bg-gradient-to-b from-slate-800 via-blue-900 to-gray-800  flex flex-col justify-center items-center">
+    <header class="w-3/4">
+      <nav
+        class="w-full flex justify-center"
+      >
+        <ul class="flex flex-col sm:flex-row justify-evenly  items-end  w-1/2 h-full ">
+          {
+            paths.map((path) => {
+              return (
+                <li class=`${path.class} ${pathname === path.address ? "active" : ""} `>
+                  
+                  <a href=`${path.address}`>
+                  {path.title} 
+                  </a>
+                  </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+    </header>
+    <main class="w-3/4">
+      <slot />
+    </main>
+  </body>
+</html>
+<style is:global>
+  li {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 1.3rem;
+    height: 25px;
+    padding: 15px;
+    text-align: center;
+  }
+ 
+  li.active {
+    background-color: rgba(151, 188, 243, 0.698);
+    border-radius: 12px;
+  }
+
+  main {
+    height: 85vh;
+  }
+ </style>
