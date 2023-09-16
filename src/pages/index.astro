@@ -1,7 +1,103 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ImagenPerfil from "../img/asd.png";
 ---
 
 <Layout title="Welcome to my world 🌏">
-  <div></div>
+  <div class="w-full h-full flex flex-row justify-evenly items-center">
+    <article class="w-1/2 h-full flex flex-col justify-evenly items-center">
+      <div class="text-center">
+        <h1 class="text-white text-9xl">Welcome</h1>
+        <h2 class="text-white text-8xl">to my 🌏</h2>
+      </div>
+      <section class="gallery">
+        <Image
+          src={"https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png"}
+          width="500"
+          height="500"
+          alt={"hola"}
+          class="rounded-s-lg"
+        />
+
+        <Image
+          src={"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/1200px-Microsoft_.NET_logo.svg.png"}
+          width="500"
+          height="500"
+          alt={"hola"}
+        />
+        <Image
+          src={"https://upload.wikimedia.org/wikipedia/commons/1/18/React_Native_Logo.png"}
+          width="500"
+          height="500"
+          alt={"hola"}
+        />
+        <Image
+          src={"https://cms.rootstack.com/sites/default/files/inline-images/typescript_1.png"}
+          width="500"
+          height="500"
+          alt={"hola"}
+        />
+        <Image
+          src={"https://www.muylinux.com/wp-content/uploads/2022/04/nodejs.png"}
+          width="500"
+          height="500"
+          alt={"hola"}
+        />
+        <Image
+          src={"https://javguerra.github.io/assets/img/mongodb.png"}
+          width="500"
+          height="500"
+          alt={"hola"}
+        />
+        <Image
+          src={"https://www.mshowto.org/images/articles/2019/07/azure-sql.jpg"}
+          width="500"
+          height="500"
+          alt={"hola"}
+          class="rounded-e-lg"
+        />
+      </section>
+      <div class="text-left w-3/4 text-white font-mono text-lg">
+        My name is <b>Geronimo</b> and i'm a software developer. I've been in
+        the industry since 2019. I worked as a freelancer between 2019 and 2020.
+        On September 2020 i started to work in companies. Currently i'm a mid
+        senior or ssr software developer. My goal is to become a .Net Architecht
+        with fully expertise on software engineering.
+      </div>
+    </article>
+    <Image
+      src={ImagenPerfil}
+      width="512"
+      height="512"
+      alt={"hola"}
+      class="rounded-3xl"
+    />
+  </div>
 </Layout>
+
+<style>
+  section {
+    display: flex;
+    width: 400px;
+    height: 150px;
+  }
+
+  section.gallery div img,
+  section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: width 0.5s ease;
+    position: relative;
+  }
+
+  section div img:hover,
+  section img:hover {
+    cursor: crosshair;
+    width: 100px;
+    opacity: 1;
+    filter: brightness(50%);
+  }
+</style>

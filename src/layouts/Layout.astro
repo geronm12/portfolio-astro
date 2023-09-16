@@ -46,10 +46,10 @@ const paths = [
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="p-4 font-helvetica bg-gradient-to-b from-slate-800 via-blue-900 to-gray-800  flex flex-col justify-center items-center">
-    <header class="w-3/4">
+  <body class="p-4 font-helvetica bg-gradient-to-l from-emerald-500  to-blue-700  flex flex-col items-center">
+    <header class="w-3/4 h-full">
       <nav
-        class="w-full flex justify-center"
+        class="w-full h-12  flex justify-center"
       >
         <ul class="flex flex-col sm:flex-row justify-evenly  items-end  w-1/2 h-full ">
           {
@@ -58,6 +58,7 @@ const paths = [
                 <li class=`${path.class} ${pathname === path.address ? "active" : ""} `>
                   
                   <a href=`${path.address}`>
+                  {pathname === path.address ? "🌏 " : ""}
                   {path.title} 
                   </a>
                   </li>
@@ -67,7 +68,7 @@ const paths = [
         </ul>
       </nav>
     </header>
-    <main class="w-3/4">
+    <main class="w-3/4  mt-10 bg-gradient-to-r from-blue-900">
       <slot />
     </main>
   </body>
@@ -89,5 +90,6 @@ const paths = [
 
   main {
     height: 85vh;
+    border-radius: 20% 12px 20% 12px;
   }
  </style>
