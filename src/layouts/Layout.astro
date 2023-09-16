@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 interface Props {
   title: string;
 }
@@ -45,6 +47,7 @@ const paths = [
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions fallback='swap'/>
   </head>
   <body class="p-4 font-helvetica bg-gradient-to-l from-emerald-500  to-blue-700  flex flex-col items-center">
     <header class="w-3/4 h-full">
