@@ -49,7 +49,7 @@ const paths = [
     <title>{title}</title>
     <ViewTransitions fallback='swap'/>
   </head>
-  <body class="p-4 font-helvetica bg-gradient-to-l from-emerald-500  to-blue-700  flex flex-col items-center">
+  <body class="p-4 font-mono bg-gradient-to-l from-emerald-500  to-blue-700  flex flex-col items-center">
     <header class="w-3/4 h-full">
       <nav
         class="w-full h-12  flex justify-center"
@@ -74,9 +74,14 @@ const paths = [
     <main class="w-3/4  mt-10 bg-gradient-to-r from-blue-900">
       <slot />
     </main>
+    <button class="rounded-full bg-emerald-500 w-36 h-14 text-white hover:border-emerald-500 active:bg-emerald-500 font-serif">CV</button>
   </body>
 </html>
 <style is:global>
+  body{
+    position: relative;
+  }
+  
   li {
     color: rgb(255, 255, 255);
     display: inline-block;
@@ -94,5 +99,11 @@ const paths = [
   main {
     height: 85vh;
     border-radius: 20% 12px 20% 12px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    transition: .2s ease;
   }
  </style>

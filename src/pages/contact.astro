@@ -3,5 +3,103 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <h1>Cel, Mail, Linkedin</h1>
+  <div class="w-full h-full flex flex-row justify-evenly items-center">
+    <section class="flex flex-col text-white">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-thumb-up-filled"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M13 3a3 3 0 0 1 2.995 2.824l.005 .176v4h2a3 3 0 0 1 2.98 2.65l.015 .174l.005 .176l-.02 .196l-1.006 5.032c-.381 1.626 -1.502 2.796 -2.81 2.78l-.164 -.008h-8a1 1 0 0 1 -.993 -.883l-.007 -.117l.001 -9.536a1 1 0 0 1 .5 -.865a2.998 2.998 0 0 0 1.492 -2.397l.007 -.202v-1a3 3 0 0 1 3 -3z"
+          stroke-width="0"
+          fill="currentColor"></path>
+        <path
+          d="M5 10a1 1 0 0 1 .993 .883l.007 .117v9a1 1 0 0 1 -.883 .993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-7a2 2 0 0 1 1.85 -1.995l.15 -.005h1z"
+          stroke-width="0"
+          fill="currentColor"></path>
+      </svg>
+      <span class="text-xl change"> </span>
+      <div
+        class="border-2 rounded-lg hover:scale-150 hover:bg-slate-700 cursor-pointer w-16 h-14 flex justify-center delay"
+      >
+        <a
+          href="https://github.com/geronm12"
+          class="flex justify-center flex-col items-center"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-github"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            ></path>
+          </svg> Github</a
+        >
+      </div>
+    </section>
+  </div>
 </Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+  div {
+    transition: 0.5s ease-out;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .change {
+    content: " ";
+    font-size: 0px;
+  }
+
+  .change::after {
+    content: " ";
+    width: 0px;
+    animation: r ease infinite;
+    animation-duration: 5s;
+    transition: 2s ease;
+  }
+
+  svg:hover {
+    fill: black;
+  }
+
+  @keyframes r {
+    0% {
+      content: "It would be lovely get to know you better.";
+      font-size: 2rem;
+    }
+
+    30% {
+      content: "I hope that we can work together sometime.";
+      font-size: 2rem;
+    }
+
+    60% {
+      content: "This are some of the ways that will help you to find me.";
+      font-size: 2rem;
+    }
+
+    100% {
+      content: "It would be lovely get to know you better.";
+      font-size: 2rem;
+    }
+  }
+</style>
