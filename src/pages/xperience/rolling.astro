@@ -5,6 +5,23 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="rolling">
-    <p>Mi experiencia en rolling</p>
+    <article class="flex flex-col h-full">
+      <h6>Empresa: <span>Rolling Code School.</span></h6>
+      <h6>Puesto: <span>Mentor Advanced.</span></h6>
+
+      <p>
+        Tareas: Planificar clases con tablero de trello, creación de ejemplos de
+        código para cada clase, enseñanza de html, css, bootstrap, javascript,
+        react js, node js, mongo db y express
+      </p>
+      <p>Proyectos:</p>
+    </article>
   </XperienceNavbarLayout>
 </XperienceLayout>
+<style>
+  article {
+    background-color: rgba(151, 188, 243, 0.698);
+    border-radius: 20px;
+    padding: 1rem;
+  }
+</style>

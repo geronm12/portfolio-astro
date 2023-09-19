@@ -6,10 +6,12 @@ const title = url.split("/")[4];
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="md:w-full md:h-full md:flex md:flex-row md:justify-evenly md:items-center md:p-4">
+  <div
+    class="md:w-full md:h-full md:flex md:flex-row md:justify-evenly md:items-center md:p-4"
+  >
     <div></div>
-    <section
-      class="md:mt-28 images md:h-4/5 md:w-1/4 md:flex md:flex-col md:items-center justify-around"
+    <picture
+      class="mt-10 images md:h-4/5 md:w-1/4 md:flex md:flex-col md:items-center justify-around"
     >
       <a href="../../xperience/mdevz">
         <Image
@@ -50,7 +52,7 @@ const title = url.split("/")[4];
           src={"https://media.licdn.com/dms/image/C560BAQFoa8hfan0wPg/company-logo_100_100/0/1641586023847?e=1703116800&v=beta&t=pmKyb6LfHrLh1ErGf2F4tugjpPMg0WwginpAXPgNEP0"}
         />
       </a>
-    </section>
+    </picture>
     <section class="texts">
       <slot />
     </section>

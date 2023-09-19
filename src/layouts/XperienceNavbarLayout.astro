@@ -7,8 +7,8 @@ const { url } = Astro.props;
 ---
 
 <div class="h-full flex flex-col">
-  <nav class="h-1/6">
-    <ul class="w-3/6 flex p-1 justify-evenly">
+  <nav class="h-16">
+    <ul class="mt-2.5 w-6/6 flex p-1 justify-evenly">
       <li>
         <a href="../xperience/mdevz" class=`${url === 'mdevz' ? 'active' : ''}`
           >Mdevz</a
@@ -27,7 +27,7 @@ const { url } = Astro.props;
       </li>
     </ul>
   </nav>
-  <section class="w-full h-full">
+  <section class="h-full">
     <slot />
   </section>
 </div>
@@ -38,7 +38,7 @@ const { url } = Astro.props;
   }
   .active {
     background-color: rgba(151, 188, 243, 0.698);
-    border-radius: 20px;
+    border-radius: 10px 10px 0px 0px;
     padding: 0.5rem;
   }
 

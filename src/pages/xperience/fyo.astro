@@ -5,6 +5,20 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="fyo">
-    <p>Mi experiencia en fyo</p>
+    <article class="h-full flex flex-col">
+      <h6>Empresa: <span>Futuros y Opciones.</span></h6>
+      <h6>Puesto: <span>Backend Developer.</span></h6>
+
+      <p>Tareas:</p>
+      <p>Proyectos:</p>
+    </article>
   </XperienceNavbarLayout>
 </XperienceLayout>
+
+<style>
+  article {
+    background-color: rgba(151, 188, 243, 0.698);
+    border-radius: 20px;
+    padding: 1rem;
+  }
+</style>
