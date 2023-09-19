@@ -5,8 +5,42 @@ import XperienceNavbarLayout from "../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="xperience">
-    Welcome to my xperiences. To look inside them you should click on the cards
-    of the left side. After that if you want to cameback here you should click
-    on them again.
+    <div class="h-1/2 flex justify-center items-center">
+      <div class="w-3/4 text-white flex flex-col text-center">
+        <span class="text-xl">Welcome to my xperiences.</span>
+        <span>
+          To look inside them you should click on the cards of the left side.
+        </span>
+        <span>
+          The other way to get in is to click on the mini-navbar on the top</span
+        >
+      </div>
+    </div>
   </XperienceNavbarLayout>
 </XperienceLayout>
+
+<style>
+  .bubble {
+    --r: 25px; /* the radius */
+    --t: 30px; /* the size of the tail */
+
+    max-width: 500px;
+    padding: calc(2 * var(--r) / 3);
+    -webkit-mask:
+      radial-gradient(var(--t) at var(--_d) 0, #0000 98%, #000 102%) var(--_d)
+        100% / calc(100% - var(--r)) var(--t) no-repeat,
+      conic-gradient(at var(--r) var(--r), #000 75%, #0000 0)
+        calc(var(--r) / -2) calc(var(--r) / -2) padding-box,
+      radial-gradient(50% 50%, #000 98%, #0000 101%) 0 0 / var(--r) var(--r)
+        space padding-box;
+    background: linear-gradient(135deg, #10cc90, #1384c5) border-box;
+    color: #fff;
+    position: absolute;
+  }
+  .left {
+    --_d: 0%;
+    border-left: var(--t) solid #0000;
+    margin-right: var(--t);
+    place-self: start;
+  }
+</style>
