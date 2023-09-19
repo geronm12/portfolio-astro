@@ -1,11 +1,12 @@
 ---
-import { Image } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
 import XperienceLayout from "../layouts/XperienceLayout.astro";
+import XperienceNavbarLayout from "../layouts/XperienceNavbarLayout.astro";
 ---
 
 <XperienceLayout>
-  Welcome to my xperiences. To look inside them you should click on the cards of
-  the left side. After that if you want to cameback here you should click on
-  them again.
+  <XperienceNavbarLayout url="xperience">
+    Welcome to my xperiences. To look inside them you should click on the cards
+    of the left side. After that if you want to cameback here you should click
+    on them again.
+  </XperienceNavbarLayout>
 </XperienceLayout>

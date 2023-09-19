@@ -1,0 +1,47 @@
+---
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<div>
+  <nav class="w-full">
+    <ul class="w-3/6 flex p-1 justify-evenly">
+      <li>
+        <a href="../xperience/mdevz" class=`${url === 'mdevz' ? 'active' : ''}`
+          >Mdevz</a
+        >
+      </li>
+      <li>
+        <a href="../xperience/fyo" class=`${url === 'fyo' ? 'active' : ''}`
+          >FyO</a
+        >
+      </li>
+      <li>
+        <a
+          href="../xperience/rolling"
+          class=`${url === 'rolling' ? 'active' : ''}`>Rolling</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <slot />
+</div>
+
+<style>
+  li {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .active {
+    background-color: rgba(151, 188, 243, 0.698);
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+
+  .active::before {
+    content: "🌏 ";
+  }
+</style>

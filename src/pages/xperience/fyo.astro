@@ -1,15 +1,10 @@
 ---
-import { Image } from "astro:assets";
 import XperienceLayout from "../../layouts/XperienceLayout.astro";
+import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 ---
 
 <XperienceLayout>
-  <h3>/xperience/fyo</h3>
-  <h1>Acá estamos dentro de fyo</h1>
+  <XperienceNavbarLayout url="fyo">
+    <p>Mi experiencia en fyo</p>
+  </XperienceNavbarLayout>
 </XperienceLayout>
-
-<style>
-  img {
-    filter: grayscale(0);
-  }
-</style>

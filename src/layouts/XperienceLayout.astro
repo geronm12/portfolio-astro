@@ -1,14 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+const { url } = Astro.request;
+const title = url.split("/")[4];
 ---
 
 <Layout title="Welcome to Astro.">
   <div class="w-full h-full flex flex-row justify-evenly items-center p-4">
-    <section class="images h-3/4 flex flex-col justify-around">
+    <section
+      class="images h-3/4 w-1/4 flex flex-col items-center justify-around"
+    >
       <a href="../../xperience/mdevz">
         <Image
-          class="rounded-xl cursor-pointer"
+          class={`rounded-l-3xl cursor-pointer ${
+            title === "mdevz"
+              ? "img-active scale-110"
+              : "grayscale hover:scale-110"
+          }`}
           width={150}
           height={150}
           alt={"Mdevz"}
@@ -17,7 +25,11 @@ import Layout from "../layouts/Layout.astro";
       </a>
       <a href="../../xperience/fyo">
         <Image
-          class="rounded-xl cursor-pointer"
+          class={`rounded-l-3xl cursor-pointer transition-all ${
+            title === "fyo"
+              ? "img-active scale-110"
+              : "grayscale hover:scale-110"
+          }`}
           width={150}
           height={150}
           alt={"FyO"}
@@ -26,7 +38,11 @@ import Layout from "../layouts/Layout.astro";
       </a>
       <a href="../xperience/rolling">
         <Image
-          class="rounded-xl cursor-pointer hover:outline-none hover:shadow-outline border border-blue-900 hover:border-emerald-600"
+          class={`rounded-l-3xl cursor-pointer ${
+            title === "rolling"
+              ? "img-active scale-110"
+              : "grayscale hover:scale-110"
+          }`}
           width={150}
           height={150}
           alt={"Rolling"}
@@ -50,11 +66,16 @@ import Layout from "../layouts/Layout.astro";
     overflow-y: scroll;
     border-radius: 10px;
   }
-  img {
-    filter: grayscale(100%);
-    transition: 0.2s ease-in;
+  .images {
+    animation: translate 1s normal;
+    transition: 1s ease;
   }
-  img:hover {
+
+  .grayscale:hover {
+    filter: grayscale(0);
+  }
+
+  .img-active {
     filter: grayscale(0);
   }
 
