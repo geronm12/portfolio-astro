@@ -5,11 +5,15 @@ import ImagenPerfil from "../img/asd.png";
 ---
 
 <Layout title="Welcome to my world 🌏">
-  <div class="w-full h-full flex flex-row justify-evenly items-center">
-    <article class="w-1/2 h-full flex flex-col justify-evenly items-center">
+  <div
+    class="w-full h-full flex flex-col lg:flex-row justify-evenly items-center"
+  >
+    <article
+      class="w-4/5 lg:w-1/2 h-full flex flex-col justify-evenly items-center"
+    >
       <div class="text-center">
-        <h1 class="text-white text-9xl">Welcome</h1>
-        <h2 class="text-white text-6xl">to my 🌏</h2>
+        <h1 class="text-white lg:text-9xl">Welcome</h1>
+        <h2 class="text-white lg:text-6xl">to my 🌏</h2>
       </div>
       <section class="gallery">
         <Image
@@ -17,7 +21,7 @@ import ImagenPerfil from "../img/asd.png";
           width="500"
           height="500"
           alt={"hola"}
-          class="rounded-s-lg"
+          class="rounded-s-lg lg:h-full"
         />
 
         <Image
@@ -58,20 +62,20 @@ import ImagenPerfil from "../img/asd.png";
           class="rounded-e-lg"
         />
       </section>
-      <div class="text-left w-3/4 text-white font-mono text-lg">
-        My name is <b>Geronimo Naum</b> and i'm a software developer. I've been in
-        the industry since 2019. I worked as a freelancer between 2019 and 2020.
-        On September 2020 i started to work in companies. Currently i'm a mid
-        level senior or ssr software developer. My goal is to become a .Net Architecht
-        with fully expertise on software engineering.
+      <div class="text-left lg:w-3/4 text-white font-mono lg:text-lg">
+        My name is <b>Geronimo Naum</b> and i'm a software developer. I've been
+        in the industry since 2019. I worked as a freelancer between 2019 and
+        2020. On September 2020 i started to work in companies. Currently i'm a
+        mid level senior or ssr software developer. My goal is to become a .Net
+        Architecht with fully expertise on software engineering.
       </div>
     </article>
     <Image
       src={ImagenPerfil}
       width="512"
       height="512"
-      alt={"hola"}
-      class="rounded-3xl"
+      alt={"Foto Perfil"}
+      class="rounded-3xl hidden lg:block lg:w-1/3"
     />
   </div>
 </Layout>
