@@ -75,11 +75,12 @@ const paths = [
         </ul>
       </nav>
     </header>
-    <main class="w-3/4  mt-10 bg-gradient-to-r from-blue-900">
+    <main class="lg:w-3/4  mt-10 bg-gradient-to-r from-blue-900">
       <slot />
     </main>
     <button class="rounded-full bg-emerald-500 w-36 h-14 text-white hover:border-emerald-500 active:bg-emerald-500 font-serif">CV</button>
-  </body>
+    <footer class="text-center">gerolpz01@gmail.com</footer>
+    </body>
 </html>
 <style is:global>
   body{
@@ -109,5 +110,23 @@ const paths = [
     position: absolute;
     bottom: 0;
     transition: .2s ease;
+  }
+
+  footer {
+    height: 30px;
+    background-color: black;
+    width: 100%;
+    color:white;
+    bottom: 0;
+    position: absolute;
+  }
+  @media (max-width: 500px) {
+    main {
+      border-radius:0;
+    }
+
+    button {
+      bottom: 4rem;
+    }
   }
  </style>
