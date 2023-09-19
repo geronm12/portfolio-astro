@@ -6,8 +6,8 @@ interface Props {
 const { url } = Astro.props;
 ---
 
-<div>
-  <nav class="w-full">
+<div class="h-full flex flex-col">
+  <nav class="h-1/6">
     <ul class="w-3/6 flex p-1 justify-evenly">
       <li>
         <a href="../xperience/mdevz" class=`${url === 'mdevz' ? 'active' : ''}`
@@ -27,13 +27,14 @@ const { url } = Astro.props;
       </li>
     </ul>
   </nav>
-  <slot />
+  <section class="w-full h-full">
+    <slot />
+  </section>
 </div>
 
 <style>
   li {
     font-size: 1rem;
-    font-weight: bold;
   }
   .active {
     background-color: rgba(151, 188, 243, 0.698);

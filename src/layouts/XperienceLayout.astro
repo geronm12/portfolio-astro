@@ -7,8 +7,9 @@ const title = url.split("/")[4];
 
 <Layout title="Welcome to Astro.">
   <div class="w-full h-full flex flex-row justify-evenly items-center p-4">
+    <div></div>
     <section
-      class="images h-3/4 w-1/4 flex flex-col items-center justify-around"
+      class="mt-28 images h-4/5 w-1/4 flex flex-col items-center justify-around"
     >
       <a href="../../xperience/mdevz">
         <Image
@@ -51,9 +52,7 @@ const title = url.split("/")[4];
       </a>
     </section>
     <section class="texts">
-      <article>
-        <slot />
-      </article>
+      <slot />
     </section>
   </div>
 </Layout>
