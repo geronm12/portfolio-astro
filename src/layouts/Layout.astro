@@ -14,27 +14,39 @@ const paths = [
     address: "/",
     title: "Home",
     class: listItemClassName,
+    show: true
   },
   {
     address: "/about",
     title: "About",
     class: listItemClassName,
+    show: true
   },
   {
     address: "/xperience",
     title: "Xperience",
     class: listItemClassName,
+    show: true
   },
   {
     address: "/contact",
     title: "Contact",
     class: listItemClassName,
+    show: true
   },
   {
     address: "/blog",
     title: "Blog",
     class: listItemClassName,
+    show: true
   },
+  // {
+  //   address: "/xperience/mdevz",
+  //   parent: "/xperience",
+  //   title: "mdevz",
+  //   class: listItemClassName,
+  //   show: false
+  // },
 ];
 ---
 
@@ -58,14 +70,13 @@ const paths = [
           {
             paths.map((path) => {
               return (
-                <li class=`${path.class} ${pathname === path.address ? "active" : ""} `>
-                  
+               <li class=`${path.class} ${pathname === path.address ? "active" : ""} `>
                   <a href=`${path.address}`>
                   {pathname === path.address ? "🌏 " : ""}
                   {path.title} 
                   </a>
-                  </li>
-              );
+                </li>
+               )
             })
           }
         </ul>

@@ -1,0 +1,60 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="w-full h-full flex flex-row justify-evenly items-center p-4">
+    <section class="images h-3/4 flex flex-col justify-around">
+      <a href="xperience/mdevz">
+        <Image
+          class="rounded-xl cursor-pointer"
+          width={150}
+          height={150}
+          alt={"Mdevz"}
+          src={"https://media.licdn.com/dms/image/C510BAQGlxgT3T03Paw/company-logo_200_200/0/1530131860048?e=1703116800&v=beta&t=V3Rfnwc231nkBptero7k60ZODp8FDRUc7apA6SX-Erg"}
+        />
+      </a>
+      <Image
+        class="rounded-xl cursor-pointer"
+        width={150}
+        height={150}
+        alt={"FyO"}
+        src={"https://media.licdn.com/dms/image/C4D0BAQF8JGYSpv-Z4w/company-logo_200_200/0/1675190219339?e=1703116800&v=beta&t=3DO3e6pY5uIqvP6bWndW2nSlOvivXwOM6AZdQcm2WWI"}
+      />
+      <Image
+        class="rounded-xl cursor-pointer hover:outline-none hover:shadow-outline border border-blue-900 hover:border-emerald-600"
+        width={150}
+        height={150}
+        alt={"Rolling"}
+        src={"https://media.licdn.com/dms/image/C560BAQFoa8hfan0wPg/company-logo_100_100/0/1641586023847?e=1703116800&v=beta&t=pmKyb6LfHrLh1ErGf2F4tugjpPMg0WwginpAXPgNEP0"}
+      />
+    </section>
+    <section class="texts">
+      <article>
+        <slot />
+      </article>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .texts {
+    color: black;
+    width: 60%;
+    height: 700px;
+    overflow-y: scroll;
+    border-radius: 10px;
+  }
+  img {
+    filter: grayscale(100%);
+    transition: 0.2s ease-in;
+  }
+  img:hover {
+    filter: grayscale(0);
+  }
+
+  section::-webkit-scrollbar {
+    background-color: transparent;
+  }
+</style>
