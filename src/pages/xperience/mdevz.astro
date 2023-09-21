@@ -5,18 +5,21 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="mdevz">
-    <article class="flex flex-col">
-      <h6>Empresa: <span>Mdevz.</span></h6>
-      <h6>Puesto: <span>Fullstack Developer.</span></h6>
-      <p>
-        Tareas: Dar mantenimiento a sistemas, ayudar con análisis de
-        requerimientos, reuniones con clientes y desarrollo de aplicaciones web,
-        mobile así como también sus servicios.
-      </p>
-      <section>
+    <br>
+    <article
+      class="flex flex-col h-full justify-start border rounded-lg p-10"
+    >
+      <section class="p-5 mt-5">
+        <h1 class="text-white text-2xl">Company: <span>mDevz</span></h1>
+        <h1 class="text-white text-2xl">
+          Job Description: <span>Fullstack Developer</span>
+        </h1>
+      </section>
+
+      <section class="overflow-y-auto">
         <article>
-          <h3>La Serenísima (Tercerizado)</h3>
-          <p>
+          <h3 class="text-white text-xl">La Serenísima (Tercerizado)</h3>
+          <p class="text-white text-lg">
             Proyecto que consistía en permitir gestionar las heladeras que se
             dejaban en los distintos locales que trabajaban con los productos de
             la serenísima. En cuanto al back lo trabajamos utilizando .Net Core
@@ -79,13 +82,3 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
     </article>
   </XperienceNavbarLayout>
 </XperienceLayout>
-<style>
-  article {
-    padding: 1rem;
-    overflow-y: scroll;
-  }
-
-  article::-webkit-scrollbar {
-    background-color: transparent;
-  }
-</style>
