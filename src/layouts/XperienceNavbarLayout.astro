@@ -6,9 +6,9 @@ interface Props {
 const { url } = Astro.props;
 ---
 
-<div class="h-full flex flex-col">
+<div class="h-full  flex flex-col">
   <nav class="h-16">
-    <ul class="mt-2.5 w-6/6 flex p-1 justify-evenly">
+    <ul class="mt-2.5 flex p-1 justify-evenly">
       <li>
         <a href="../xperience/mdevz" class=`${url === 'mdevz' ? 'active' : ''}`
           >Mdevz</a
@@ -37,12 +37,13 @@ const { url } = Astro.props;
     font-size: 1rem;
   }
   .active {
-    background-color: rgba(151, 188, 243, 0.698);
+    border-bottom: 1px solid white;
     border-radius: 10px 10px 0px 0px;
     padding: 0.5rem;
   }
 
   .active::before {
-    content: "🌏 ";
+    content: "🌏";
   }
+ 
 </style>

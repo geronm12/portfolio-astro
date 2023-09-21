@@ -5,18 +5,87 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="mdevz">
-    <article class="h-full flex flex-col">
+    <article class="flex flex-col">
       <h6>Empresa: <span>Mdevz.</span></h6>
       <h6>Puesto: <span>Fullstack Developer.</span></h6>
-      <p>Tareas:</p>
-      <p>Proyectos:</p>
+      <p>
+        Tareas: Dar mantenimiento a sistemas, ayudar con análisis de
+        requerimientos, reuniones con clientes y desarrollo de aplicaciones web,
+        mobile así como también sus servicios.
+      </p>
+      <section>
+        <article>
+          <h3>La Serenísima (Tercerizado)</h3>
+          <p>
+            Proyecto que consistía en permitir gestionar las heladeras que se
+            dejaban en los distintos locales que trabajaban con los productos de
+            la serenísima. En cuanto al back lo trabajamos utilizando .Net Core
+            y SQL Server mientras que el front se enfocó en una parte utilizando
+            Angular para la web de backoffice y flutter para la aplicación
+            movil. La web permitía acceder a las heladeras como a los distintos
+            recursos (Contratos en pdf, recorridos, vencimientos, etc) La app
+            consistía principalmente en permitir al usuario solicitar heladeras
+            nuevas, reparaciones de anteriores, firmar los contratos, subir
+            fotos de las heladeras y enviar mensajes como también realizar
+            encuestas a los empleados. También contenía un pop up que permitía
+            al usuario saber cuando había leches por vencer y el recorrido que
+            debían realizar en el día a día.
+          </p>
+        </article>
+
+        <article>
+          <h3>Danone (Tercerizado)</h3>
+          <p>
+            Proyecto que fue realizado con .Net Core para el backend y SQL
+            Server para el frontend. Utilizando React Js con Styled Components y
+            Class Components junto con Flutter para la app mobile. Las mismas
+            consistían en poder llevar un recuendo de las distintas
+            capacitaciones realizadas por los empleados así como también ver sus
+            notas y tomar asistencia con firma desde la app. La web por otro
+            lado permitía ver los distintas estadísticas de los capacitaciones
+            realizadas para saber si las distintas plantas cumplían con el
+            minimo de capacitaciones para cada empleado así también permitía
+            importar un excel y crear capacitaciones a partir de dicha
+            importación (con toda su planificación previa1).
+          </p>
+        </article>
+        <article>
+          <h3>Archemist</h3>
+          <p>
+            En archemist trabajamos con la app de WeVisit360, una aplicación en
+            realidad aumentada creada con Unity utilizando ARkit and ARCore para
+            el uso de la RA y librerías como Photon Engine para crear las salas
+            de participación y Agora para las llamadas. La aplicación consistía
+            principalmente en permitir que los realtors puedan mostrar sus
+            viviendas en venta/alquiler a través de llamadas y dar tours en RA
+            utilizando camaras 360 para tomar fotos y crear las habitaciones
+            simuladas. También creamos una extensión que permitía realizar las
+            mismas visitas pero tomando fotos panoramicas y uniendo las mismas
+            con las matrices de posicionamiento lo que permitía crear visitas
+            para telefonos que no posean giroscopio.
+          </p>
+        </article>
+        <article>
+          <h3>BLE Lights</h3>
+          <p>
+            En mi último proyecto en mDevz trabajé realizando los servicios para
+            una aplicación que consistía en conectar luces led a través de
+            bluetooth. Para eso utilizamos la librería BLELed para adaptarla al
+            uso de typescript con ionic. En este proyecto no participe mucho
+            puesto que sólo realicé los servicios.
+          </p>
+        </article>
+      </section>
     </article>
   </XperienceNavbarLayout>
 </XperienceLayout>
 <style>
   article {
-    background-color: rgba(151, 188, 243, 0.698);
-    border-radius: 20px;
     padding: 1rem;
+    overflow-y: scroll;
+  }
+
+  article::-webkit-scrollbar {
+    background-color: transparent;
   }
 </style>

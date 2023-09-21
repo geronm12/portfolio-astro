@@ -5,20 +5,22 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="fyo">
-    <article class="h-full flex flex-col">
-      <h6>Empresa: <span>Futuros y Opciones.</span></h6>
-      <h6>Puesto: <span>Backend Developer.</span></h6>
-
-      <p>Tareas:</p>
-      <p>Proyectos:</p>
+    <article class="h-full flex flex-col justify-start">
+      <section class="h-1/3 p-5 mt-5">
+        <h1 class="text-white text-2xl">Company: <span>Futuros y Opciones</span></h1>
+        <h1 class="text-white text-2xl">Job Description: <span>Backend Developer</span></h1>
+      </section>
+      <article class="text-white text-lg">
+        On December 2021 I started my way on Futuros y Opciones a company of the
+        agro-industry that works with grains brokerage. Currently we have a lot
+        of apps but i'm working on two of them: FyO Acopio & FyO Trade. Both of
+        them were made with .Net, WPF and WebServices, also we work with SQL
+        Server (Stored Procedures, Triggers, Functions) and NUnit for unitesting
+        We use all the microsoft environment: , Azure Devops for aggile, Git and
+        Tfs.
+      </article>
     </article>
   </XperienceNavbarLayout>
 </XperienceLayout>
 
-<style>
-  article {
-    background-color: rgba(151, 188, 243, 0.698);
-    border-radius: 20px;
-    padding: 1rem;
-  }
-</style>
+ 
