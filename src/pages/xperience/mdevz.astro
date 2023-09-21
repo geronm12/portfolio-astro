@@ -5,8 +5,13 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 
 <XperienceLayout>
   <XperienceNavbarLayout url="mdevz">
-    <br />
     <article class="flex flex-col h-full justify-start border rounded-lg p-10">
+      <div class="flex justify-evenly w-full text-white">
+        <a href="#serenisima">La serenisima</a>
+        <a href="#danone">Danone</a>
+        <a href="#wevisit">WeVisit360</a>
+        <a href="#ble">BLE Led</a>
+      </div>
       <section class="p-5 mt-5">
         <h1 class="text-white text-2xl">Company: <span>mDevz 🔥</span></h1>
         <h1 class="text-white text-2xl">
@@ -14,8 +19,8 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
         </h1>
       </section>
 
-      <section class="overflow-y-auto">
-        <article class="p-2">
+      <section class="overflow-y-auto transparent scroll-smooth">
+        <article class="p-2" id="serenisima">
           <h3 class="text-white text-xl">La Serenísima (Tercerizado)</h3>
           <p class="text-white text-md">
             Proyecto que consistía en permitir gestionar las heladeras que se
@@ -34,7 +39,7 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
           </p>
         </article>
 
-        <article class="p-2">
+        <article class="p-2" id="danone">
           <h3 class="text-white text-xl">Danone (Tercerizado)</h3>
           <p class="text-white text-md mb-1">
             Proyecto que fue realizado con .Net Core para el backend y SQL
@@ -51,7 +56,7 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
           </p>
         </article>
 
-        <article class="p-2">
+        <article class="p-2" id="wevisit">
           <h3 class="text-white text-xl">Archemist</h3>
           <p class="text-white text-md mb-1">
             En archemist trabajamos con la app de WeVisit360, una aplicación en
@@ -68,7 +73,7 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
           </p>
         </article>
 
-        <article class="p-2">
+        <article class="p-2" id="ble">
           <h3 class="text-white text-xl">BLE Lights</h3>
           <p class="text-white text-md mb-1">
             En mi último proyecto en mDevz trabajé realizando los servicios para
@@ -82,3 +87,9 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
     </article>
   </XperienceNavbarLayout>
 </XperienceLayout>
+
+<style>
+  .transparent::-webkit-scrollbar {
+    background-color: transparent;
+  }
+</style>
