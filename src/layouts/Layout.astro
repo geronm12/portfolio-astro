@@ -78,7 +78,7 @@ const paths = [
     <main class="lg:w-3/4  mt-10 bg-gradient-to-r from-blue-900">
       <slot />
     </main>
-    <button class="rounded-full bg-emerald-500 w-36 h-14 text-white hover:border-emerald-500 active:bg-emerald-500 font-serif">CV</button>
+    <a href="../../public/Geronimo Naum Lopez CV.pdf" class="text-center  btn rounded-full bg-emerald-500 w-36 h-12 flex items-center justify-center  text-white hover:bg-emerald-300 active:bg-emerald-600" download>Descargar Cv</a>
     </body>
 </html>
 <style is:global>
@@ -107,7 +107,7 @@ const paths = [
     border-radius: 20% 12px 20% 12px;
   }
 
-  button {
+  .btn {
     position: absolute;
     bottom: 0;
     transition: .2s ease;
@@ -126,7 +126,7 @@ const paths = [
       border-radius:0;
     }
 
-    button {
+    .btn {
       bottom: 4rem;
     }
   }

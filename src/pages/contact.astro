@@ -4,102 +4,110 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Welcome to Astro.">
   <div class="w-full h-full flex flex-row justify-evenly items-center">
-    <section class="flex flex-col text-white">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-thumb-up-filled"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M13 3a3 3 0 0 1 2.995 2.824l.005 .176v4h2a3 3 0 0 1 2.98 2.65l.015 .174l.005 .176l-.02 .196l-1.006 5.032c-.381 1.626 -1.502 2.796 -2.81 2.78l-.164 -.008h-8a1 1 0 0 1 -.993 -.883l-.007 -.117l.001 -9.536a1 1 0 0 1 .5 -.865a2.998 2.998 0 0 0 1.492 -2.397l.007 -.202v-1a3 3 0 0 1 3 -3z"
-          stroke-width="0"
-          fill="currentColor"></path>
-        <path
-          d="M5 10a1 1 0 0 1 .993 .883l.007 .117v9a1 1 0 0 1 -.883 .993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-7a2 2 0 0 1 1.85 -1.995l.15 -.005h1z"
-          stroke-width="0"
-          fill="currentColor"></path>
-      </svg>
-      <span class="text-xl change"> </span>
-      <div
-        class="border-2 rounded-lg hover:scale-150 hover:bg-zinc-950 cursor-pointer w-16 h-14 flex justify-center delay"
-      >
-        <a
-          href="https://github.com/geronm12"
-          class="flex justify-center flex-col items-center"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-github"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+    <section
+      class="flex flex-col text-white h-full justify-center items-center"
+    >
+      <div class="flex flex-col text-2xl">
+        <span>It would be lovely get to know you better 🤝🏻</span>
+        <span>I really hope that we can work together sometime 💪🏽</span>
+        <span>This are some of the ways that will help you find me 🔍</span>
+      </div>
+
+      <div class="w-full h-1/6 flex justify-evenly items-end">
+        <div class="cursor-pointer w-32 h-16 flex justify-center delay">
+          <a
+            href="https://github.com/geronm12"
+            class="flex justify-center flex-col items-center text-lg"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-github hover:fill-black"
+              width="100"
+              height="100"
+              viewBox="0 0 20 20"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+              ></path>
+            </svg> Github</a
           >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-            ></path>
-          </svg> Github</a
-        >
+        </div>
+        <div class="cursor-pointer w-32 h-16 flex justify-center delay">
+          <a
+            href="https://github.com/geronm12"
+            class="flex justify-center flex-col items-center"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-linkedin hover:fill-blue-600"
+              width="100"
+              height="100"
+              viewBox="0 0 20 20"
+              stroke-width="1"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+              ></path>
+              <path d="M8 11l0 5"></path>
+              <path d="M8 8l0 .01"></path>
+              <path d="M12 16l0 -5"></path>
+              <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+            </svg> LinkedIn
+          </a>
+        </div>
+        <div class="cursor-pointer w-32 h-16 flex justify-center delay">
+          <a
+            href="https://github.com/geronm12"
+            class="flex justify-center flex-col items-center"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-mail-filled"
+              width="100"
+              height="100"
+              viewBox="0 0 22 22"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                class="hover:fill-emerald-500"
+                d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z"
+                stroke-width="0"
+                fill="currentColor"></path>
+              <path
+                d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z"
+                stroke-width="0"
+                fill="currentColor"></path>
+            </svg>
+             Mail
+          </a>
+        </div>
       </div>
     </section>
   </div>
 </Layout>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+  /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
   div {
     transition: 0.5s ease-out;
     font-family: "Roboto", sans-serif;
-  }
+  } */
 
-  .change {
-    content: " ";
-    font-size: 0px;
-  }
-
-  .change::after {
-    content: " ";
-    width: 0px;
-    animation: r ease infinite;
-    animation-duration: 5s;
-    transition: 2s ease;
-  }
-
-  svg:hover {
-    fill: black;
-  }
-
-  @keyframes r {
-    0% {
-      content: "It would be lovely get to know you better.";
-      font-size: 2rem;
-    }
-
-    30% {
-      content: "I hope that we can work together sometime.";
-      font-size: 2rem;
-    }
-
-    60% {
-      content: "This are some of the ways that will help you to find me.";
-      font-size: 2rem;
-    }
-
-    100% {
-      content: "It would be lovely get to know you better.";
-      font-size: 2rem;
-    }
+  #overlay {
+    cursor: pointer;
+    opacity: 0;
   }
 </style>

@@ -1,13 +1,17 @@
 ---
 import XperienceLayout from "../../layouts/XperienceLayout.astro";
 import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
+
+const { url } = Astro.request;
+const title = url.split("#");
+console.log(Astro.request);
 ---
 
 <XperienceLayout>
   <XperienceNavbarLayout url="mdevz">
     <article class="flex flex-col h-full justify-start border rounded-lg p-10">
       <div class="flex justify-evenly w-full text-white">
-        <a href="#serenisima">La serenisima</a>
+        <a href="#serenisima" class="active text-md">La Serenisima</a>
         <a href="#danone">Danone</a>
         <a href="#wevisit">WeVisit360</a>
         <a href="#ble">BLE Led</a>
@@ -91,5 +95,9 @@ import XperienceNavbarLayout from "../../layouts/XperienceNavbarLayout.astro";
 <style>
   .transparent::-webkit-scrollbar {
     background-color: transparent;
+  }
+
+  a:target {
+    border-bottom: 1px solid white;
   }
 </style>
